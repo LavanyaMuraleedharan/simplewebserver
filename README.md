@@ -15,9 +15,46 @@ Serving the HTML pages.
 Testing the webserver
 
 ## PROGRAM:
-
+```
+NAME:LAVANYA M
+REG NO:212222110021
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
+<!DOCTYPE html>
+<html>
+<head>
+<title>My webserver</title>
+</head>
+<body>
+<h2 align="center">Top 5 revenue companies </h2>
+<hr>
+<ol>
+<h3>
+<li>apple</li>
+<li>amazon</li>
+<li>Microsoft</li>
+<li>alphabet</li>
+<li>meta</li>
+</h3>
+</ol>
+</body>
+</html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',8000)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+```
 
 ## OUTPUT:
+![web](https://github.com/LavanyaMuraleedharan/simplewebserver/assets/120103862/e58bf463-32d5-41bb-b166-e202ad6beabb)
 
 
 ## RESULT:
