@@ -18,6 +18,8 @@ Testing the webserver
 ```
 NAME:LAVANYA M
 REG NO:212222110021
+
+
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
@@ -54,6 +56,8 @@ httpd.serve_forever()
 ```
 
 ## OUTPUT:
+![image](https://github.com/LavanyaMuraleedharan/simplewebserver/assets/120103862/dc677a2b-ce93-44ba-9bd4-684c7bd53996)
+
 ![Screenshot from 2023-09-09 09-20-09](https://github.com/LavanyaMuraleedharan/simplewebserver/assets/120103862/fc168291-398d-497c-9f0a-41494f070724)
 
 
